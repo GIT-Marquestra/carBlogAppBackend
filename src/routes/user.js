@@ -15,7 +15,7 @@ const userRouter = Router();
 
 userRouter.post("/signup", async (req, res) => {
 
-    console.log("Hi")
+    // console.log("Hi")
     const userpfp = "src/assets/Default_pfp.jpg";
     // console.log("Request body: ", req.body);
     const requiredBody = z.object({
@@ -231,12 +231,15 @@ userRouter.put("/profileUp", userMiddleware, async (req, res) => {
 })
 
 userRouter.get("/allBlogs", async (req, res) => {
+
     try{
+    
         const allBlogs = await blogModel.find()
         if (!Array.isArray(allBlogs)) {
             console.error("Data is not an array. Returning an empty array.");
             return res.json([]);
         }
+        console.log("found it")
 
         // console.log("Hi")
         // console.log(typeof(allBlogs))
