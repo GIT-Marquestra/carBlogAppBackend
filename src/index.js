@@ -9,7 +9,7 @@ dotenv.config();
 const { userRouter } = require("./routes/user")
 const { blogRouter } = require("./routes/blog")
 const corsOptions = {
-    origin: "https://675b35cf220b2f2cc798adda--blog-website-car.netlify.app/", // Update this to the frontend URL when deploying
+    origin: "https://blog-website-car.netlify.app/", // Update this to the frontend URL when deploying
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Specify allowed methods
     credentials: true, 
 };
