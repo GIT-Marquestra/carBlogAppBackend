@@ -4,12 +4,16 @@ const dotenv = require("dotenv")
 const cors = require("cors");
 const app = express();
 app.use(express.json())
-app.use(cors({ origin: "http://localhost:5173" }));
 dotenv.config();
 
 const { userRouter } = require("./routes/user")
 const { blogRouter } = require("./routes/blog")
-
+const corsOptions = {
+    origin: "http://localhost:5173", // Update this to the frontend URL when deploying
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Specify allowed methods
+    credentials: true, // Allow credentials (if necessary)
+};
+app.use(cors(corsOptions));
 
 const port = 3000;
 
