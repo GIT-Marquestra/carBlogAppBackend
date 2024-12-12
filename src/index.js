@@ -9,7 +9,7 @@ dotenv.config();
 const { userRouter } = require("./routes/user")
 const { blogRouter } = require("./routes/blog")
 const corsOptions = {
-    origin: "https://car-blog-frontend-fj1u.vercel.app", // Update this to the frontend URL when deploying
+    origin: "https://car-blog-frontend-fj1u-h7ctq99oo-git-marquestras-projects.vercel.app/", // Update this to the frontend URL when deploying
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Specify allowed methods
     credentials: true, 
 };
